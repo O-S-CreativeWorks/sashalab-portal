@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6c5ce7">
+<title>SashaLab ERP — O&S CreativeWorks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <h1>O&S <span>CreativeWorks</span></h1>
+      <p>SashaLab · Guitar School ERP</p>
+    </div>
+    <nav class="nav" id="nav">
+      <a data-route="dashboard"><span class="ic">◈</span>Dashboard</a>
+      <div class="group-label">Správa</div>
+      <a data-route="students"><span class="ic">◉</span>Studenti</a>
+      <a data-route="lessons"><span class="ic">◷</span>Docházka</a>
+      <a data-route="homework"><span class="ic">✎</span>Domácí úkoly</a>
+      <a data-route="certificates"><span class="ic">★</span>Certifikáty</a>
+      <div class="group-label">Finance</div>
+      <a data-route="invoices"><span class="ic">▤</span>Fakturace</a>
+      <a data-route="packages"><span class="ic">▦</span>Balíčky</a>
+      <a data-route="pricing"><span class="ic">◎</span>Ceník</a>
+      <div class="group-label">Systém</div>
+      <a data-route="settings"><span class="ic">⚙</span>Nastavení</a>
+    </nav>
+    <div class="sidebar-foot">© O&S CreativeWorks · SashaLab</div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <h2 id="pageTitle">Dashboard</h2>
+      </div>
+      <div class="actions">
+        <button class="btn btn-sm btn-icon" id="btnTheme" title="Přepnout režim">🌙</button>
+        <button class="btn btn-sm" id="btnExport">⬇ Export dat</button>
+        <button class="btn btn-primary btn-sm" id="btnQuickAdd">+ Nový student</button>
+      </div>
+    </div>
+    <div class="content" id="app"></div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h3 id="modalTitle"></h3>
+      <button class="modal-close" id="modalClose">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer" id="modalFooter"></div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
